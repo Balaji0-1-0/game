@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY FIRST GAME</title>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Londrina+Shadow&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Fontdiner+Swanky&family=Londrina+Shadow&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@1&family=Piedra&display=swap" rel="stylesheet">
+    <style>
+        table,tr,td{
+            border:1px solid black;
+        }
+        
+        .b{
+            width: 100px;
+            background-color: wheat;
+            color: purple;
+            padding-top: 10px;
+            text-align: center;
+            text-decoration: sienna;
+            font-size:5em;
+            height: 100px;
+        }
+        body{
+           
+            border: 7px solid tan;
+                      
+        }
+        body {
+            background: linear-gradient(270deg, #be3725, #cdba3f, #82333f);
+            background-size: 600% 600%;
+
+            -webkit-animation: AnimationName 30s ease infinite;
+            -moz-animation: AnimationName 30s ease infinite;
+            animation: AnimationName 30s ease infinite;
+        }
+        
+
+        @-webkit-keyframes AnimationName {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+        @-moz-keyframes AnimationName {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+        @keyframes AnimationName {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+        .a{
+            font-family: 'Fontdiner Swanky', cursive;
+            font-weight:1072;
+            font-style:normal;
+            font-feature-settings: "vkna";
+            font-size: 5em;
+            background: linear-gradient(270deg, #191708, #dc995d, #c4cf8d);
+            background-size: 600% 600%;
+            -webkit-animation: AnimationName 30s ease infinite;
+                -moz-animation: AnimationName 30s ease infinite;
+                animation: AnimationName 30s ease infinite;
+            border-image: inherit;
+            border-radius: 3em;
+            border-style:ridge;
+           
+        } 
+        .a:hover{
+            animation: shake 0.5s;
+            animation-iteration-count: infinite;
+        }
+        img:hover {
+            margin-top: -60px;
+            animation: shake 0.5s;
+            animation-iteration-count: infinite;
+        }
+        
+
+        @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }       
+        h2{
+            font-family: 'Piedra', cursive;
+            color:rgb(43, 40, 20);
+            font-size:3em;
+            position:relative;
+            width:400px;
+            margin:0 auto;
+            text-decoration: underline; 
+            background: linear-gradient(270deg, #a9c52e, #a05a1d, #b9450f);
+                background-size: 600% 600%;
+
+                -webkit-animation: AnimationName 30s ease infinite;
+                -moz-animation: AnimationName 30s ease infinite;
+                animation: AnimationName 30s ease infinite;
+                    
+            
+        }
+        #a2,#a1,#message,#gh,#pi{
+          text-decoration: wavy;
+          text-decoration-color: steelblue;
+          font-family: 'Piedra', cursive;
+          font-size:2em;
+          
+          font-weight: bold;
+          text-align: center;
+          
+        }
+        #message,#gh,#pi{
+          background: linear-gradient(270deg, #c55e2e, #415a12, #0fb9a2);
+        }
+       
+        #name1,#name2,#name3,#nme1,#nme2,#nme3{
+            font-family: 'Londrina Shadow', cursive;
+            font: outline;
+            font-size: 2em;
+            font-style: italic;
+            font-weight: bolder;
+            color: black;
+            background-color: cornsilk;
+            border-radius: 2em;
+
+        }
+        button{
+            border: 2px solid palegreen;
+            background-color: peru;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2em;
+            color: black;
+        }
+        label{
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 1.5em;
+            font-weight: bolder;
+            font-stretch: semi-expanded;
+        }
+        a{
+            font-family: 'Fredericka the Great', cursive;
+            font-size: 2em;
+            font-weight: bolder;
+            font-stretch: wider;
+            color: black;
+
+        }
+       
+        
+       
+    </style>
+</head>
+<body>
+    <center>
+        <h1 class="a">TIC TAC TOE</h1></br></br></br></br></br></br>
+        <img src="https://image.flaticon.com/icons/png/512/934/934426.png" width="200" height="200">
+    </center>
+    <div id="log">
+        
+        <form onsubmit="logsuc()">
+            <center>
+                
+                <h2>USER LOGIN PAGE</h2></br>
+                </br>
+                </br>
+                </br>
+                <label for="name">USERNAME:</label>
+                <input type="text" id="name1" name="name1" size="50px" required>
+                </br>
+                </br>
+                <label for="pass">PASSWORD:</label>
+                <input type="password" id="nme1" name="nme1"  size="50px" required>
+                </br></br>
+                </br></br>
+                <button type="submit">LOGIN</button>
+                </br></br>
+                <a href="#" onclick="registerpage()">NEW USER :REGISTER HERE</a></br>
+            </br>
+
+            </center>
+        </form>
+    </div>
+    <div id="reg"> 
+        <form onsubmit="regsuc()">
+            <center>
+                <h2>USER REGISTRATION PAGE</h2></br>
+                </br>
+                </br>
+                </br>
+                <label for="name">USERNAME:</label>
+                <input type="text" id="name2" name="name2"  size="50px" required>
+                </br></br>
+                </br>
+                <label for="pass">PASSWORD:</label>
+                <input type="password" id="nme2" name="nme2"  size="50px"  required>
+                </br></br>
+                </br></br>
+                <button type="submit">REGISTER</button>
+                </br></br>
+                <a href="#" onclick="loginpage()">EXISTING USER :LOGIN HERE</a></br>
+            </br>
+
+            </center>
+        </form>
+    </div>    
+    <div id="play">
+        <form onsubmit="start()">
+            <center>
+                <h2>ENTER PLAYER CREDENTIALS</h2></br>
+                </br>
+                </br>
+                </br>
+                <label for="name">PLAYER1:</label>
+                <input type="text" id="name3" name="name3"  size="50px" required>
+                </br></br>
+                </br>
+                <label for="pass">PLAYER2:</label>
+                <input type="text" id="nme3" name="nme3"  size="50px" required>
+                </br></br>
+                </br></br>
+                <button type="submit">START GAME</button>
+                </br></br>
+                <a href="#" onclick="loginpage()">HOME</a></br>
+            </br>
+
+            </center>
+        </form>
+    </div>
+    <div id="game">
+        <p id="chance"></p>
+        <center><p id="gh">Player <span id="a1"></span> your turn</p></center>
+        <table align="center">
+        <tr>
+            <td><div class="b"></div></td>
+            <td><div class="b"></div></td>
+            <td><div class="b"></div></td>
+        </tr>
+        <tr>
+            <td><div class="b"></div></td>
+            <td><div class="b"></div></td>
+            <td><div class="b"></div></td>
+        </tr>
+        <tr>
+            <td><div class="b"></div></td>
+            <td><div class="b"></div></td>
+            <td><div class="b"></div></td>
+        </tr>
+        </table>
+      </br>
+      </br>
+
+        <h2 id="message"></h2></br></br>
+        <center><p id="pi"></p></center></div></br></br>
+       
+    </div>
+
+
+
+    <script>
+        var lg=document.getElementById("log");
+        var rg=document.getElementById("reg");
+        var pl=document.getElementById("play");
+        var g1=document.getElementById("game");
+       
+        rg.remove();
+        pl.remove();
+        g1.remove();
+        var input=[{name:"balaji",ps:"1234"}];
+       
+        function regsuc(){
+            var name=document.getElementById("name2").value;
+            var pword=document.getElementById("nme2").value;
+            var add={"name":name,"ps":pword};
+            input.push(add);
+            window.confirm("SUCCESSFULLY COMPLETED REGISTRATION");
+            loginpage();
+        }
+        function logsuc(){
+            var name=document.getElementById("name1").value;
+            var pword=document.getElementById("nme1").value;
+            var add={"name":name,"ps":pword};
+            var c=0;
+            for( var i in input){
+                if(input[i].name == name && input[i].ps == pword)
+                    c=1;  
+            }
+            if(c==1){
+                window.alert("LOGIN SUCCESSFULL");
+                gamemenu();
+            }
+            else{
+                window.alert("NOT SUCCESSFULL RETRY");
+                loginpage();
+            }
+        }
+        function loginpage(){
+            document.body.appendChild(lg);
+            rg.remove();
+            pl.remove();
+            g1.remove();
+        }
+        function registerpage(){
+            lg.remove();
+            document.body.appendChild(rg);
+            pl.remove();
+            g1.remove();
+        }
+         
+        function gamemenu(){
+            lg.remove();
+            rg.remove();
+            g1.remove();
+            document.body.appendChild(pl);
+            
+        }
+       
+        function start(){
+            var p1=document.getElementById("name3").value;
+            var p2=document.getElementById("nme3").value;
+            
+            lg.remove();
+            rg.remove();
+            pl.remove();
+            document.body.appendChild(g1);
+            let cp="";
+            let t="";
+            let st="start";
+            const b1=document.getElementsByClassName("b");
+            var x=document.getElementById("chance");
+            x.innerHTML=Math.floor(Math.random()*2);
+            if(x==0){
+              cp=p1;
+              t="X";
+            }
+            else{
+              cp=p2;
+              t="O";
+            }
+            document.getElementById("a1").innerHTML = cp.toUpperCase();
+            document.getElementById("chance").style.visibility = "hidden";
+           
+            for (let i = 0; i < b1.length; i++) {
+              document.getElementById("pi").innerHTML="";
+              document.getElementById("message").innerHTML="";
+              b1[i].addEventListener("click", function() {
+                if (b1[i].innerHTML.trim() == "" && st == "start") {
+                  b1[i].innerHTML = t;
+                  if(cp==p1){
+                    cp=p2;
+                    t="O";
+                  }
+                  else{
+                    cp=p1;
+                    t="X";
+                  }
+                  document.getElementById("a1").innerHTML = cp.toUpperCase();
+                  if (b1[0].innerHTML == b1[1].innerHTML && b1[1].innerHTML == b1[2].innerHTML && b1[0].innerHTML.trim() != "") {
+                          res(0, 1, 2);
+                  } 
+                  else if (b1[3].innerHTML == b1[4].innerHTML && b1[4].innerHTML == b1[5].innerHTML && b1[3].innerHTML.trim() != "") {
+                          res(3, 4, 5);
+                  } 
+                  else if (b1[6].innerHTML == b1[7].innerHTML && b1[7].innerHTML == b1[8].innerHTML && b1[6].innerHTML.trim() != "") {
+                          res(6, 7, 8);
+                  }
+                   else if (b1[0].innerHTML == b1[3].innerHTML && b1[3].innerHTML == b1[6].innerHTML && b1[0].innerHTML.trim() != "") {
+                          res(0, 3, 6);
+                  }
+                   else if (b1[1].innerHTML == b1[4].innerHTML && b1[4].innerHTML == b1[7].innerHTML && b1[1].innerHTML.trim() != "") {
+                          res(1, 4, 7);
+                  }
+                   else if (b1[2].innerHTML == b1[5].innerHTML && b1[5].innerHTML == b1[8].innerHTML && b1[2].innerHTML.trim() != "") {
+                          res(2, 5, 8);
+                  }
+                   else if (b1[0].innerHTML == b1[4].innerHTML && b1[4].innerHTML == b1[8].innerHTML && b1[0].innerHTML.trim() != "") {
+                          res(0, 4, 8);
+                  }
+                   else if (b1[2].innerHTML == b1[4].innerHTML && b1[4].innerHTML == b1[6].innerHTML && b1[2].innerHTML.trim() != "") {
+                          res(2, 4, 6);
+                  }
+                   else if(b1[2].innerHTML.trim() != "" && b1[0].innerHTML.trim() != "" && b1[1].innerHTML.trim() != "" && b1[3].innerHTML.trim() != "" && b1[4].innerHTML.trim() != "" && b1[5].innerHTML.trim() != "" && b1[6].innerHTML.trim() != "" && b1[7].innerHTML.trim() != "" && b1[8].innerHTML.trim() != ""){
+                         document.getElementById("message").innerHTML = "VADA POCHE";
+                         alert("game draw");
+                         setTimeout(function(){ 
+                         
+                          st="start";
+                          
+                          document.getElementById("pi").innerHTML="play again";
+                          
+                          document.getElementById("pi").addEventListener("click",function(){for (let i = 0; i < b1.length; i++) {
+                            b1[i].innerHTML = "";
+                          }gamemenu();});
+                          
+                        
+                          }, 4000);
+                   }
+                }
+              });
+            }
+            function res(x, y, z) {
+              b1[x].style.background = "#0d8b70";
+              b1[x].style.color = "white";
+              b1[y].style.background = "#0d8b70";
+              b1[y].style.color = "white";
+              b1[z].style.background = "#0d8b70";
+              b1[z].style.color = "white";
+              document.getElementById("message").innerHTML = cp == p1 ? p2.toUpperCase()+" "+"winner winner chicken dinner" : p1.toUpperCase()+" "+"winner winner chicken dinner";
+              document.getElementById("message").style.display = "block";
+              st = "Over";
+              setTimeout(function(){ 
+                          
+                          st="start";
+                          b1[x].style.backgroundColor = "wheat";
+                          b1[y].style.backgroundColor = "wheat";
+                          b1[z].style.backgroundColor = "wheat";
+                          b1[x].style.color = "purple";
+                          b1[y].style.color = "purple";
+                          b1[z].style.color = "purple";
+                          
+                          document.getElementById("pi").innerHTML="play again";
+                          
+                          document.getElementById("pi").addEventListener("click",function(){for (let i = 0; i < b1.length; i++) {
+                            b1[i].innerHTML = "";
+                          }gamemenu();});
+                          
+                          }, 4000);
+            }
+        }
+
+
+
+
+
+       
+        
+        
+        
+        
+            
+
+      
+    </script>
+</body>
+</html>
