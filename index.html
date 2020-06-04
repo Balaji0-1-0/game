@@ -113,7 +113,7 @@
                     
             
         }
-        #a2,#a1,#message,#gh,#pi{
+        #a2,#a1,#message,#gh,#pi,#heya{
           text-decoration: wavy;
           text-decoration-color: steelblue;
           font-family: 'Piedra', cursive;
@@ -123,7 +123,7 @@
           text-align: center;
           
         }
-        #message,#gh,#pi{
+        #message,#gh,#pi,#heya{
           background: linear-gradient(270deg, #c55e2e, #415a12, #0fb9a2);
         }
        
@@ -241,8 +241,9 @@
         </form>
     </div>
     <div id="game">
-        <p id="chance"></p>
+       
         <center><p id="gh">Player <span id="a1"></span> your turn</p></center>
+        <center><p id="heya"></p></center>
         <table align="center">
         <tr>
             <td><div class="b"></div></td>
@@ -275,7 +276,9 @@
         var rg=document.getElementById("reg");
         var pl=document.getElementById("play");
         var g1=document.getElementById("game");
-       
+        let p1=document.getElementById("name3")
+        let p2=document.getElementById("nme3")
+            
         rg.remove();
         pl.remove();
         g1.remove();
@@ -329,8 +332,6 @@
         }
        
         function start(){
-            var p1=document.getElementById("name3").value;
-            var p2=document.getElementById("nme3").value;
             
             lg.remove();
             rg.remove();
@@ -340,18 +341,19 @@
             let t="";
             let st="start";
             const b1=document.getElementsByClassName("b");
-            var x=document.getElementById("chance");
-            x.innerHTML=Math.floor(Math.random()*2);
-            if(x==0){
-              cp=p1;
+            var x=Math.floor(Math.random()*5);
+            if(x<3){
+              cp=p1.value;
               t="X";
+              document.getElementById("heya").innerHTML="player"+" "+cp+" "+"will press X"+"  "+"and player"+" "+p2.value+" "+"will press O";
             }
             else{
-              cp=p2;
+              cp=p2.value;
               t="O";
+              document.getElementById("heya").innerHTML="player"+" "+cp+" "+"will press O"+" "+"and player"+" "+p1.value+" "+"will press X";
             }
             document.getElementById("a1").innerHTML = cp.toUpperCase();
-            document.getElementById("chance").style.visibility = "hidden";
+           
            
             for (let i = 0; i < b1.length; i++) {
               document.getElementById("pi").innerHTML="";
@@ -359,12 +361,12 @@
               b1[i].addEventListener("click", function() {
                 if (b1[i].innerHTML.trim() == "" && st == "start") {
                   b1[i].innerHTML = t;
-                  if(cp==p1){
-                    cp=p2;
-                    t="O";
+                  if(cp==p1.value){
+                    cp=p2.value;
+                      t="O";
                   }
                   else{
-                    cp=p1;
+                    cp=p1.value;
                     t="X";
                   }
                   document.getElementById("a1").innerHTML = cp.toUpperCase();
@@ -398,12 +400,12 @@
                          setTimeout(function(){ 
                          
                           st="start";
-                          
+                          t="";
                           document.getElementById("pi").innerHTML="play again";
                           
                           document.getElementById("pi").addEventListener("click",function(){for (let i = 0; i < b1.length; i++) {
                             b1[i].innerHTML = "";
-                          }gamemenu();});
+                          } document.getElementById("a1").innerHTML = "";document.getElementById("message").innerHTML ="";gamemenu();});
                           
                         
                           }, 4000);
@@ -418,11 +420,11 @@
               b1[y].style.color = "white";
               b1[z].style.background = "#0d8b70";
               b1[z].style.color = "white";
-              document.getElementById("message").innerHTML = cp == p1 ? p2.toUpperCase()+" "+"winner winner chicken dinner" : p1.toUpperCase()+" "+"winner winner chicken dinner";
+              document.getElementById("message").innerHTML = cp == p1.value ? p2.value.toUpperCase()+" "+"winner winner chicken dinner" : p1.value.toUpperCase()+" "+"winner winner chicken dinner";
               document.getElementById("message").style.display = "block";
               st = "Over";
               setTimeout(function(){ 
-                          
+                          t="";
                           st="start";
                           b1[x].style.backgroundColor = "wheat";
                           b1[y].style.backgroundColor = "wheat";
@@ -435,7 +437,7 @@
                           
                           document.getElementById("pi").addEventListener("click",function(){for (let i = 0; i < b1.length; i++) {
                             b1[i].innerHTML = "";
-                          }gamemenu();});
+                          }document.getElementById("a1").innerHTML = "";document.getElementById("message").innerHTML ="";gamemenu();});
                           
                           }, 4000);
             }
